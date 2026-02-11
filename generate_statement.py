@@ -31,8 +31,8 @@ def draw_globe_watermark(c, width, height):
         c.saveState()
         
         # Solid opaque LIGHT color for the form content
-        # Using a very light grey (#E6E6E6) to simulate transparency without alpha blending artifacts (darker overlaps)
-        WATERMARK_COLOR = HexColor("#E6E6E6") 
+        # Using a very light grey (#F2F2F2) to simulate transparency without alpha blending artifacts (darker overlaps)
+        WATERMARK_COLOR = HexColor("#F2F2F2") 
         c.setFillColor(WATERMARK_COLOR) 
         c.setStrokeColor(WATERMARK_COLOR)
         c.setFillAlpha(1.0) 
