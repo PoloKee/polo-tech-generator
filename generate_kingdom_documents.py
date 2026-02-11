@@ -43,38 +43,39 @@ def generate_kingdom_docs():
 
     # --- Generate Transactions ---
     
-    # 1. Main Month (Jan 4 - Jan 31)
+    # 1. Main Month (Jan 5 - Jan 31)
     # Generate ~25 transactions for the rest of the month
-    main_txs = generate_transactions("01/04/2026", "01/31/2026", user_profile, count=25)
+    main_txs = generate_transactions("01/05/2026", "01/31/2026", user_profile, count=25)
     
-    # 2. Specific First 3 Days (Jan 1 - Jan 3)
-    # Requirement: "from the 1 - 3rd there will be 4 random transactions per day"
-    # "payment of rent on the amount of 750"
+    # 2. Specific First 4 Days (Jan 1 - Jan 4)
+    # Requirement: "4 payments per day from different residents each one should be a payment of 750"
     
     start_txs = []
+    resident_names = [
+        "J. SMITH", "A. JOHNSON", "M. WILLIAMS", "B. JONES", 
+        "C. BROWN", "D. DAVIS", "E. MILLER", "F. WILSON",
+        "G. MOORE", "H. TAYLOR", "I. ANDERSON", "J. THOMAS",
+        "K. JACKSON", "L. WHITE", "M. HARRIS", "N. MARTIN"
+    ]
     
-    # Jan 01
-    date_01 = datetime.datetime(2026, 1, 1)
-    # Rent
-    start_txs.append({
-        "date_obj": date_01,
-        "description": "RENT PAYMENT EAGLE LANDING",
-        "amount": -750.00,
-        "category": "RENT"
-    })
-    # 3 Randoms to make 4 total
-    for _ in range(3):
-        start_txs.append(create_random_tx(date_01, user_profile))
+    # 4 days, 4 transactions per day = 16 transactions
+    for day_offset in range(4): # 0, 1, 2, 3 -> Jan 1, 2, 3, 4
+        date_obj = datetime.datetime(2026, 1, 1) + datetime.timedelta(days=day_offset)
         
-    # Jan 02
-    date_02 = datetime.datetime(2026, 1, 2)
-    for _ in range(4):
-        start_txs.append(create_random_tx(date_02, user_profile))
-        
-    # Jan 03
-    date_03 = datetime.datetime(2026, 1, 3)
-    for _ in range(4):
-        start_txs.append(create_random_tx(date_03, user_profile))
+        for i in range(4):
+            # Pick a resident name
+            res_idx = day_offset * 4 + i
+            if res_idx < len(resident_names):
+                res_name = resident_names[res_idx]
+            else:
+                res_name = f"RESIDENT #{res_idx+1}"
+            
+            start_txs.append({
+                "date_obj": date_obj,
+                "description": f"RENT PAYMENT - {res_name}",
+                "amount": 750.00, # Income
+                "category": "INCOME"
+            })
 
     # Combine and Sort
     all_raw_txs = start_txs + convert_formatted_to_raw(main_txs, 2026)
@@ -104,7 +105,7 @@ def generate_kingdom_docs():
                 "type": "Business Checking",
                 "account_number": "5502948821",
                 "previous_balance": start_balance,
-                "deposits_credits": 0.00, # We didn't generate deposits, maybe add one?
+                "deposits_credits": sum(t['amount'] for t in final_transactions if t['amount'] > 0),
                 "withdrawals_debits": abs(sum(t['amount'] for t in final_transactions if t['amount'] < 0)),
                 "ending_balance": current_balance,
                 "ytd_dividends": 0.00,
@@ -125,7 +126,7 @@ def generate_kingdom_docs():
     }
     
     # Generate PDF
-    output_file = "Kingdom_Mandate_Center_Statement_Jan2026.pdf"
+    output_file = "Kingdom_Mandate_Center_Statement_Jan2026_revised.pdf"
     print(f"Generating {output_file}...")
     create_statement_pdf(output_file, stmt_data)
     print("Done.")
