@@ -895,7 +895,7 @@ def create_statement_pdf(output_path, data):
     c.setStrokeColor(colors.black)
     c.line(table_left, y_row + row_height - 20, table_right, y_row + row_height - 20) # Ensure line above totals is black/solid if needed
     
-    c.setFont("Helvetica-Bold", 8)
+    c.setFont("Helvetica-Bold", 10)
     c.drawString(30, y_row + 5, "Totals")
     
     # Calculate totals automatically from accounts
@@ -911,7 +911,7 @@ def create_statement_pdf(output_path, data):
     for i, key in enumerate(field_keys):
         val = f"${totals[key]:,.2f}"
         x_pos = col_x_positions[i]
-        c.drawCentredString(x_pos, y_row - 5, val)
+        c.drawCentredString(x_pos, y_row - 8, val)
         
     # Draw bottom border of the table
     c.setStrokeColor(colors.black)

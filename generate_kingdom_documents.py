@@ -2,6 +2,7 @@ import datetime
 import random
 from generate_statement import create_statement_pdf
 from transaction_generator import generate_transactions, MERCHANT_CATEGORIES, get_regional_merchants
+from compliance_agent import enforce_pdfa_compliance
 
 def generate_kingdom_docs():
     # --- Profile Data ---
@@ -29,8 +30,9 @@ def generate_kingdom_docs():
     
     account_holder_data = {
         "name": "KINGDOM MANDATE CENTER",
-        "address_line1": "909 EAGLE LANDING PKWY #1044",
-        "address_line2": "STOCKBRIDGE GA 30281",
+        "address_line1": "RJ MATHEWS",
+        "address_line2": "909 EAGLE LANDING PKWY #1044",
+        "address_line3": "STOCKBRIDGE GA 30281",
         "access_number": "8839102"
     }
 
@@ -145,9 +147,13 @@ def generate_kingdom_docs():
     }
     
     # Generate PDF
-    output_file = "Kingdom_Mandate_Center_Statement_Jan2026_revised_v3.pdf"
+    output_file = "Kingdom_Mandate_Center_Statement_Jan2026_revised_v4.pdf"
     print(f"Generating {output_file}...")
     create_statement_pdf(output_file, stmt_data)
+    
+    # Run Compliance Agent
+    print("Running PDF Compliance Agent...")
+    enforce_pdfa_compliance(output_file)
     print("Done.")
 
 def create_random_tx(date_obj, profile):
