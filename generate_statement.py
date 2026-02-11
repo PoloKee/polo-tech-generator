@@ -784,25 +784,36 @@ def create_statement_pdf(output_path, data):
     c.setFont("Courier-Bold", 9)
     y_addr = height - 120
     
-    # Codes
-    c.drawString(40, y_addr, "#BWNLLSV")
-    y_addr -= 10
-    c.drawString(40, y_addr, "#000000P4P2VPP6A3#000JMA90F")
-    y_addr -= 10
-    
-    # Name and Address from Data
-    c.setFont("Courier", 9)
+    # Codes & Name Block
+    # User requested format:
+    # #BWNLLSV
+    # #000000P4P2VPP6A3#000JMA90F KINGDOM MANDATE CENTER
+    # RJ MATHEWS
+    # ...
     
     holder = data.get("account_holder", {})
     name = holder.get("name", "NAPOLEON KEETON")
     addr1 = holder.get("address_line1", "870 WESTMORELAND CIR NW")
     addr2 = holder.get("address_line2", "ATLANTA GA 30318-4433")
+    addr3 = holder.get("address_line3", "") # New line 3
+
+    c.drawString(40, y_addr, "#BWNLLSV")
+    y_addr -= 10
     
-    address_lines = [name, addr1, addr2]
+    # Combined Code + Name
+    # Note: If the name is long, this might need splitting, but assuming it fits for now.
+    combined_line = f"#000000P4P2VPP6A3#000JMA90F {name}"
+    c.drawString(40, y_addr, combined_line)
+    y_addr -= 10
+    
+    # Address Lines
+    # The user wants "RJ MATHEWS" (addr1) then "909..." (addr2) then "Stockbridge..." (addr3)
+    address_lines = [addr1, addr2, addr3]
     
     for line in address_lines:
-        c.drawString(40, y_addr, line)
-        y_addr -= 12
+        if line:
+            c.drawString(40, y_addr, line)
+            y_addr -= 12
 
     # --- Middle Promo Section ---
     y_promo = height - 260
@@ -911,8 +922,11 @@ def create_statement_pdf(output_path, data):
     c.setStrokeColor(colors.black)
     c.line(table_left, y_row + row_height - 20, table_right, y_row + row_height - 20) # Ensure line above totals is black/solid if needed
     
+    # Bottom Align Totals
+    # Row bottom is approx y_row - 20.
+    # We draw text close to that.
     c.setFont("Helvetica-Bold", 10)
-    c.drawString(30, y_row + 5, "Totals")
+    c.drawString(30, y_row - 12, "Totals")
     
     # Calculate totals automatically from accounts
     totals = {
@@ -927,7 +941,7 @@ def create_statement_pdf(output_path, data):
     for i, key in enumerate(field_keys):
         val = f"${totals[key]:,.2f}"
         x_pos = col_x_positions[i]
-        c.drawCentredString(x_pos, y_row - 8, val)
+        c.drawCentredString(x_pos, y_row - 12, val)
         
     # Draw bottom border of the table
     c.setStrokeColor(colors.black)
@@ -955,22 +969,7 @@ def create_statement_pdf(output_path, data):
     # Centered above address? No, left aligned as per image
     c.drawString(110, y_voucher + 25, voucher_name)
     
-    # Address Lines for Voucher
-    c.setFont("Helvetica", 7)
-    v_addr1 = holder.get("address_line1", "")
-    v_addr2 = holder.get("address_line2", "")
-    v_addr3 = holder.get("address_line3", "")
-    
-    v_y = y_voucher + 15
-    if v_addr1:
-        c.drawString(110, v_y, v_addr1)
-        v_y -= 8
-    if v_addr2:
-        c.drawString(110, v_y, v_addr2)
-        v_y -= 8
-    if v_addr3:
-        c.drawString(110, v_y, v_addr3)
-        
+    # Address Lines REMOVED as per user request
     c.setFont("Helvetica", 9)
     c.drawString(165, y_voucher + 5, access_num)
     

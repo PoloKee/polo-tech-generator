@@ -32,7 +32,7 @@ def generate_kingdom_docs():
         "name": "KINGDOM MANDATE CENTER",
         "address_line1": "RJ MATHEWS",
         "address_line2": "909 EAGLE LANDING PKWY #1044",
-        "address_line3": "STOCKBRIDGE GA 30281",
+        "address_line3": "Stockbridge GA 30281",
         "access_number": "8839102"
     }
 
@@ -147,7 +147,7 @@ def generate_kingdom_docs():
     }
     
     # Generate PDF
-    output_file = "Kingdom_Mandate_Center_Statement_Jan2026_revised_v6.pdf"
+    output_file = "Kingdom_Mandate_Center_Statement_Jan2026_revised_v7.pdf"
     print(f"Generating {output_file}...")
     create_statement_pdf(output_file, stmt_data)
     
