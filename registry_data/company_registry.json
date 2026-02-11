@@ -1,0 +1,13 @@
+{
+    "NTS Designs, Inc": {
+        "name": "NTS Designs, Inc",
+        "address_line1": "3455 Peachtree Road, Northeast",
+        "address_line2": "Atlanta, GA 30318",
+        "bank_name": "Wells Fargo",
+        "bank_address_line1": "333 Market Street",
+        "bank_address_line2": "San Francisco, CA 94105",
+        "signature_name": "Kent Jones",
+        "routing_number": "121000248",
+        "account_number": "2719026747"
+    }
+}

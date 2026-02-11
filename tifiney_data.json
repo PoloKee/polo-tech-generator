@@ -1,0 +1,77 @@
+{
+  "employee": {
+    "name": "Tifiney Goins",
+    "address_line1": "2872 North Fair Loop",
+    "address_line2": "Stonecrest, GA 30038",
+    "ssn_last4": "4315",
+    "employee_id": "71297",
+    "department": "Design",
+    "filing_status": "Single",
+    "exemptions": 1
+  },
+  "company": {
+    "name": "NTS Designs, Inc",
+    "address_line1": "3455 Peachtree Road, Northeast",
+    "address_line2": "Atlanta, GA 30318"
+  },
+  "pay_stubs": [
+    {
+      "pay_period_start": "01/01/2026",
+      "pay_period_end": "01/14/2026",
+      "pay_date": "01/16/2026",
+      "check_number": "1051",
+      "advice_number": "90001001",
+      "earnings": [
+        {"description": "Regular Pay", "rate": 31.25, "hours": 80.00, "amount": 2500.00, "ytd_amount": 2500.00}
+      ],
+      "taxes": [
+        {"description": "Federal Withholding", "amount": 285.00, "ytd_amount": 285.00},
+        {"description": "Social Security", "amount": 155.00, "ytd_amount": 155.00},
+        {"description": "Medicare", "amount": 36.25, "ytd_amount": 36.25},
+        {"description": "GA State Withholding", "amount": 120.00, "ytd_amount": 120.00}
+      ],
+      "deductions": [
+        {"description": "Health Insurance", "amount": 45.00, "ytd_amount": 45.00},
+        {"description": "Dental Insurance", "amount": 8.00, "ytd_amount": 8.00}
+      ],
+      "net_pay": 1850.75,
+      "totals": {
+          "gross": 2500.00,
+          "ytd_gross": 2500.00,
+          "taxes": 596.25,
+          "ytd_taxes": 596.25,
+          "deductions": 53.00,
+          "ytd_deductions": 53.00
+      }
+    },
+    {
+      "pay_period_start": "01/15/2026",
+      "pay_period_end": "01/28/2026",
+      "pay_date": "01/30/2026",
+      "check_number": "1002",
+      "advice_number": "90001002",
+      "earnings": [
+        {"description": "Regular Pay", "rate": 31.25, "hours": 80.00, "amount": 2500.00, "ytd_amount": 5000.00}
+      ],
+      "taxes": [
+        {"description": "Federal Withholding", "amount": 285.00, "ytd_amount": 570.00},
+        {"description": "Social Security", "amount": 155.00, "ytd_amount": 310.00},
+        {"description": "Medicare", "amount": 36.25, "ytd_amount": 72.50},
+        {"description": "GA State Withholding", "amount": 120.00, "ytd_amount": 240.00}
+      ],
+      "deductions": [
+        {"description": "Health Insurance", "amount": 45.00, "ytd_amount": 90.00},
+        {"description": "Dental Insurance", "amount": 8.00, "ytd_amount": 16.00}
+      ],
+      "net_pay": 1850.75,
+      "totals": {
+          "gross": 2500.00,
+          "ytd_gross": 5000.00,
+          "taxes": 596.25,
+          "ytd_taxes": 1192.50,
+          "deductions": 53.00,
+          "ytd_deductions": 106.00
+      }
+    }
+  ]
+}

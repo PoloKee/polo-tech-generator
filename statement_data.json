@@ -1,0 +1,472 @@
+{
+    "account_holder": {
+        "name": "TIFINEY GOINS",
+        "lastName": 
+
+
+               "address_line1": "2872 NORTH FAIR LOOP",
+        "address_line2": "STONECREST GA 30038",
+        "access_number": "71297"
+    },
+    "period": "01/01/26 - 01/31/26",
+    "accounts": [
+        {
+            "type": "EveryDay Checking",
+            "account_number": "7123566726",
+            "previous_balance": 301.11,
+            "deposits_credits": 3701.5,
+            "withdrawals_debits": 6657.61,
+            "ending_balance": -2655.0,
+            "ytd_dividends": 4.73,
+            "transactions": [
+                {
+                    "date": "01/02",
+                    "description": "ATM WITHDRAWAL STONECREST GA",
+                    "amount": -100.0,
+                    "balance": 201.11
+                },
+                {
+                    "date": "01/02",
+                    "description": "PUBLIX SUPER MARKETS",
+                    "amount": -133.4,
+                    "balance": 67.71
+                },
+                {
+                    "date": "01/03",
+                    "description": "STARBUCKS",
+                    "amount": -12.35,
+                    "balance": 55.36
+                },
+                {
+                    "date": "01/04",
+                    "description": "SHELL OIL",
+                    "amount": -49.91,
+                    "balance": 5.45
+                },
+                {
+                    "date": "01/05",
+                    "description": "NETFLIX.COM SUBSCRIPTION",
+                    "amount": -15.99,
+                    "balance": -10.54
+                },
+                {
+                    "date": "01/06",
+                    "description": "CHEVRON",
+                    "amount": -60.44,
+                    "balance": -70.98
+                },
+                {
+                    "date": "01/06",
+                    "description": "MCDONALDS",
+                    "amount": -15.66,
+                    "balance": -86.64
+                },
+                {
+                    "date": "01/07",
+                    "description": "STARBUCKS",
+                    "amount": -8.0,
+                    "balance": -94.64
+                },
+                {
+                    "date": "01/07",
+                    "description": "PUBLIX SUPER MARKETS",
+                    "amount": -122.29,
+                    "balance": -216.93
+                },
+                {
+                    "date": "01/07",
+                    "description": "DOORDASH",
+                    "amount": -48.55,
+                    "balance": -265.48
+                },
+                {
+                    "date": "01/08",
+                    "description": "STARBUCKS",
+                    "amount": -9.15,
+                    "balance": -274.63
+                },
+                {
+                    "date": "01/08",
+                    "description": "WAL-MART SUPERCENTER",
+                    "amount": -48.83,
+                    "balance": -323.46
+                },
+                {
+                    "date": "01/08",
+                    "description": "AMZN Mktp US",
+                    "amount": -68.7,
+                    "balance": -392.16
+                },
+                {
+                    "date": "01/08",
+                    "description": "DOORDASH",
+                    "amount": -26.43,
+                    "balance": -418.59
+                },
+                {
+                    "date": "01/09",
+                    "description": "CHICK-FIL-A",
+                    "amount": -23.8,
+                    "balance": -442.39
+                },
+                {
+                    "date": "01/09",
+                    "description": "CVS PHARMACY",
+                    "amount": -33.76,
+                    "balance": -476.15
+                },
+                {
+                    "date": "01/09",
+                    "description": "APPLE SERVICE",
+                    "amount": -6.36,
+                    "balance": -482.51
+                },
+                {
+                    "date": "01/09",
+                    "description": "SHELL OIL",
+                    "amount": -51.69,
+                    "balance": -534.2
+                },
+                {
+                    "date": "01/10",
+                    "description": "HOME DEPOT",
+                    "amount": -161.03,
+                    "balance": -695.23
+                },
+                {
+                    "date": "01/10",
+                    "description": "SPOTIFY",
+                    "amount": -10.99,
+                    "balance": -706.22
+                },
+                {
+                    "date": "01/10",
+                    "description": "HOME DEPOT",
+                    "amount": -126.78,
+                    "balance": -833.0
+                },
+                {
+                    "date": "01/10",
+                    "description": "COMCAST CABLE",
+                    "amount": -75.63,
+                    "balance": -908.63
+                },
+                {
+                    "date": "01/10",
+                    "description": "APPLE SERVICE",
+                    "amount": -2.75,
+                    "balance": -911.38
+                },
+                {
+                    "date": "01/11",
+                    "description": "T-MOBILE BILL",
+                    "amount": -97.01,
+                    "balance": -1008.39
+                },
+                {
+                    "date": "01/11",
+                    "description": "SHELL OIL",
+                    "amount": -51.74,
+                    "balance": -1060.13
+                },
+                {
+                    "date": "01/11",
+                    "description": "CHICK-FIL-A",
+                    "amount": -23.83,
+                    "balance": -1083.96
+                },
+                {
+                    "date": "01/12",
+                    "description": "TARGET STORE",
+                    "amount": -149.14,
+                    "balance": -1233.1
+                },
+                {
+                    "date": "01/12",
+                    "description": "LOWES",
+                    "amount": -61.09,
+                    "balance": -1294.19
+                },
+                {
+                    "date": "01/13",
+                    "description": "CVS PHARMACY",
+                    "amount": -49.06,
+                    "balance": -1343.25
+                },
+                {
+                    "date": "01/13",
+                    "description": "SHELL OIL",
+                    "amount": -47.79,
+                    "balance": -1391.04
+                },
+                {
+                    "date": "01/13",
+                    "description": "TARGET STORE",
+                    "amount": -98.31,
+                    "balance": -1489.35
+                },
+                {
+                    "date": "01/14",
+                    "description": "CHICK-FIL-A",
+                    "amount": -20.74,
+                    "balance": -1510.09
+                },
+                {
+                    "date": "01/15",
+                    "description": "HOME DEPOT",
+                    "amount": -82.11,
+                    "balance": -1592.2
+                },
+                {
+                    "date": "01/16",
+                    "description": "ACH DEPOSIT NTS DESIGNS PAYROLL",
+                    "amount": 1850.75,
+                    "balance": 258.55
+                },
+                {
+                    "date": "01/16",
+                    "description": "LOWES",
+                    "amount": -113.3,
+                    "balance": 145.25
+                },
+                {
+                    "date": "01/17",
+                    "description": "STARBUCKS",
+                    "amount": -13.59,
+                    "balance": 131.66
+                },
+                {
+                    "date": "01/17",
+                    "description": "CVS PHARMACY",
+                    "amount": -11.87,
+                    "balance": 119.79
+                },
+                {
+                    "date": "01/18",
+                    "description": "POS PURCHASE KROGER STONECREST",
+                    "amount": -234.5,
+                    "balance": -114.71
+                },
+                {
+                    "date": "01/18",
+                    "description": "T-MOBILE BILL",
+                    "amount": -103.18,
+                    "balance": -217.89
+                },
+                {
+                    "date": "01/18",
+                    "description": "UBER TRIP",
+                    "amount": -16.38,
+                    "balance": -234.27
+                },
+                {
+                    "date": "01/19",
+                    "description": "APPLE SERVICE",
+                    "amount": -7.84,
+                    "balance": -242.11
+                },
+                {
+                    "date": "01/20",
+                    "description": "GEORGIA POWER BILL PAY",
+                    "amount": -379.69,
+                    "balance": -621.8
+                },
+                {
+                    "date": "01/20",
+                    "description": "LOWES",
+                    "amount": -93.69,
+                    "balance": -715.49
+                },
+                {
+                    "date": "01/20",
+                    "description": "LOWES",
+                    "amount": -169.49,
+                    "balance": -884.98
+                },
+                {
+                    "date": "01/20",
+                    "description": "UBER TRIP",
+                    "amount": -31.42,
+                    "balance": -916.4
+                },
+                {
+                    "date": "01/20",
+                    "description": "CHICK-FIL-A",
+                    "amount": -19.92,
+                    "balance": -936.32
+                },
+                {
+                    "date": "01/20",
+                    "description": "APPLE SERVICE",
+                    "amount": -9.29,
+                    "balance": -945.61
+                },
+                {
+                    "date": "01/21",
+                    "description": "CHICK-FIL-A",
+                    "amount": -21.04,
+                    "balance": -966.65
+                },
+                {
+                    "date": "01/22",
+                    "description": "SPOTIFY",
+                    "amount": -10.99,
+                    "balance": -977.64
+                },
+                {
+                    "date": "01/22",
+                    "description": "WAL-MART SUPERCENTER",
+                    "amount": -130.44,
+                    "balance": -1108.08
+                },
+                {
+                    "date": "01/22",
+                    "description": "T-MOBILE BILL",
+                    "amount": -89.56,
+                    "balance": -1197.64
+                },
+                {
+                    "date": "01/23",
+                    "description": "PUBLIX SUPER MARKETS",
+                    "amount": -66.31,
+                    "balance": -1263.95
+                },
+                {
+                    "date": "01/23",
+                    "description": "COMCAST CABLE",
+                    "amount": -76.84,
+                    "balance": -1340.79
+                },
+                {
+                    "date": "01/24",
+                    "description": "WAL-MART SUPERCENTER",
+                    "amount": -56.67,
+                    "balance": -1397.46
+                },
+                {
+                    "date": "01/25",
+                    "description": "TRANSFER TO SAVINGS 3148913266",
+                    "amount": -50.0,
+                    "balance": -1447.46
+                },
+                {
+                    "date": "01/26",
+                    "description": "DOORDASH",
+                    "amount": -36.17,
+                    "balance": -1483.63
+                },
+                {
+                    "date": "01/26",
+                    "description": "TARGET STORE",
+                    "amount": -62.95,
+                    "balance": -1546.58
+                },
+                {
+                    "date": "01/27",
+                    "description": "TARGET STORE",
+                    "amount": -111.07,
+                    "balance": -1657.65
+                },
+                {
+                    "date": "01/27",
+                    "description": "COMCAST CABLE",
+                    "amount": -94.54,
+                    "balance": -1752.19
+                },
+                {
+                    "date": "01/28",
+                    "description": "HOME DEPOT",
+                    "amount": -158.37,
+                    "balance": -1910.56
+                },
+                {
+                    "date": "01/28",
+                    "description": "LOWES",
+                    "amount": -107.49,
+                    "balance": -2018.05
+                },
+                {
+                    "date": "01/28",
+                    "description": "SHELL OIL",
+                    "amount": -57.38,
+                    "balance": -2075.43
+                },
+                {
+                    "date": "01/29",
+                    "description": "T-MOBILE BILL",
+                    "amount": -106.22,
+                    "balance": -2181.65
+                },
+                {
+                    "date": "01/30",
+                    "description": "ACH DEPOSIT NTS DESIGNS PAYROLL",
+                    "amount": 1850.75,
+                    "balance": -330.9
+                },
+                {
+                    "date": "01/30",
+                    "description": "UBER TRIP",
+                    "amount": -21.95,
+                    "balance": -352.85
+                },
+                {
+                    "date": "01/30",
+                    "description": "TARGET STORE",
+                    "amount": -72.02,
+                    "balance": -424.87
+                },
+                {
+                    "date": "01/30",
+                    "description": "SHELL OIL",
+                    "amount": -30.13,
+                    "balance": -455.0
+                },
+                {
+                    "date": "01/31",
+                    "description": "MORTGAGE PAYMENT WELLS FARGO",
+                    "amount": -2200.0,
+                    "balance": -2655.0
+                }
+            ]
+        },
+        {
+            "type": "Membership Savings",
+            "account_number": "3148913266",
+            "previous_balance": 30.0,
+            "deposits_credits": 50.0,
+            "withdrawals_debits": 0.0,
+            "ending_balance": 80.0,
+            "ytd_dividends": 0.0,
+            "transactions": [
+                {
+                    "date": "01/25",
+                    "description": "TRANSFER FROM CHECKING 7123566726",
+                    "amount": 50.0,
+                    "balance": 80.0
+                }
+            ]
+        }
+    ],
+    "savings_account": {
+        "type": "Membership Savings",
+        "account_number": "3148913266",
+        "previous_balance": 100.11,
+        "dividends": 0.02,
+        "ending_balance": 100.13,
+        "ytd_dividends": 0.13,
+        "transactions": [
+             {
+                "date": "01/01",
+                "description": "Beginning Balance",
+                "amount": 0,
+                "balance": 100.11
+             },
+             {
+                "date": "01/31",
+                "description": "Dividend",
+                "amount": 0.02,
+                "balance": 100.13
+             }
+        ]
+    }
+}

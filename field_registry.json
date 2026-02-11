@@ -1,0 +1,59 @@
+{
+  "registry_name": "ADP_Premier_Style_Paystub_Fields",
+  "version": "1.0",
+  "fields": {
+    "employee.name": {
+      "description": "Full legal name of the employee",
+      "type": "String",
+      "example": "Tifiney Goins"
+    },
+    "employee.address": {
+      "description": "Mailing address of the employee",
+      "type": "String",
+      "example": "2872 North Fair Loop, Stonecrest, GA 30038"
+    },
+    "employee.id": {
+      "description": "Internal Company Employee ID",
+      "type": "String",
+      "example": "71297"
+    },
+    "company.name": {
+      "description": "Legal Name of the Employer",
+      "type": "String",
+      "example": "NTS Disappe Designs"
+    },
+    "pay_period.start": {
+      "description": "Start date of the pay cycle",
+      "type": "Date (MM/DD/YYYY)",
+      "example": "01/01/2026"
+    },
+    "pay_period.end": {
+      "description": "End date of the pay cycle",
+      "type": "Date (MM/DD/YYYY)",
+      "example": "01/14/2026"
+    },
+    "pay_date": {
+      "description": "Date funds are available/check date",
+      "type": "Date (MM/DD/YYYY)",
+      "example": "01/16/2026"
+    },
+    "earnings.regular.amount": {
+      "description": "Gross pay for regular hours",
+      "type": "Currency",
+      "calculation": "Rate * Hours"
+    },
+    "taxes.federal": {
+      "description": "Federal Income Tax Withholding",
+      "type": "Currency"
+    },
+    "taxes.state": {
+      "description": "State Income Tax Withholding",
+      "type": "Currency"
+    },
+    "net_pay": {
+      "description": "Final take-home pay after all deductions",
+      "type": "Currency",
+      "calculation": "Gross - Taxes - Deductions"
+    }
+  }
+}

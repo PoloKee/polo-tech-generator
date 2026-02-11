@@ -1,0 +1,19 @@
+{
+    "71297": {
+        "id": "71297",
+        "name": "Tifiney Goins",
+        "address_line1": "2872 North Fair Loop",
+        "address_line2": "Stonecrest, GA 30038",
+        "ssn_last4": "4315",
+        "department": "Design",
+        "filing_status": "Single",
+        "exemptions": 1,
+        "hourly_rate": 31.25,
+        "ytd_gross": 15000.0,
+        "ytd_federal_tax": 1635.0,
+        "ytd_ss_tax": 930.0,
+        "ytd_medicare_tax": 217.5,
+        "ytd_state_tax": 720.0,
+        "ytd_benefits": 318.0
+    }
+}
