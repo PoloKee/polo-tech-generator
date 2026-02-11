@@ -874,9 +874,9 @@ def create_statement_pdf(output_path, data):
     for idx, acc in enumerate(data['accounts']):
         # Account Name/Number (Left Aligned in Col 1)
         # Col 1 is 25 to 170
-        c.setFont("Helvetica-Bold", 7)
+        c.setFont("Helvetica-Bold", 9)
         c.drawString(30, y_row + 5, acc['type']) # Adjusted Y for taller row
-        c.setFont("Helvetica", 7)
+        c.setFont("Helvetica", 9)
         c.drawString(30, y_row - 10, acc['account_number'])
         
         # Values as Text
