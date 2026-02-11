@@ -571,14 +571,11 @@ def draw_persistent_header(c, width, height, data, page_num, total_pages):
         c.setFont("Helvetica-Bold", 10)
         c.drawString(25, height - 90, "Statement of Account")
         
-        c.setFont("Helvetica", 9)
-        # Get name safely
-        holder = data.get('account_holder', {})
-        name = holder.get('name', 'NAPOLEON KEETON').upper()
-        c.drawString(25, height - 102, f"For {name}")
-        
-        # Address lines REMOVED for Page 2+ as per user request
-        # (Previously they were here, now just Name is sufficient)
+        # Name/Address REMOVED for Page 2+ as per user request
+        # c.setFont("Helvetica", 9)
+        # holder = data.get('account_holder', {})
+        # name = holder.get('name', 'NAPOLEON KEETON').upper()
+        # c.drawString(25, height - 102, f"For {name}")
     
     # --- Right Side ---
     # Center Align relative to the right column

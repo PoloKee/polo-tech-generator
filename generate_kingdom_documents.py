@@ -147,7 +147,7 @@ def generate_kingdom_docs():
     }
     
     # Generate PDF
-    output_file = "Kingdom_Mandate_Center_Statement_Jan2026_revised_v8.pdf"
+    output_file = "Kingdom_Mandate_Center_Statement_Jan2026_revised_v9.pdf"
     print(f"Generating {output_file}...")
     create_statement_pdf(output_file, stmt_data)
     
