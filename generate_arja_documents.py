@@ -149,7 +149,7 @@ def generate_arja_docs():
     
     # Add Fixed Deposits/Bills
     stmt1_txs.append({"date": "12/19", "description": "ACH DEPOSIT NTS DESIGNS", "amount": 863.56, "balance": 0})
-    stmt1_txs.append({"date": "12/15", "description": "NETFLIX.COM", "amount": -15.99, "balance": 0})
+    # stmt1_txs.append({"date": "12/15", "description": "NETFLIX.COM", "amount": -15.99, "balance": 0})
     
     # Sort again just in case
     stmt1_txs.sort(key=lambda x: x['date'])
@@ -196,7 +196,7 @@ def generate_arja_docs():
     
     # Add Fixed Deposits/Bills
     stmt2_txs.append({"date": "01/02", "description": "ACH DEPOSIT NTS DESIGNS", "amount": 863.56, "balance": 0})
-    stmt2_txs.append({"date": "01/15", "description": "NETFLIX.COM", "amount": -15.99, "balance": 0})
+    # stmt2_txs.append({"date": "01/15", "description": "NETFLIX.COM", "amount": -15.99, "balance": 0})
 
     # Sort again
     stmt2_txs.sort(key=lambda x: x['date'])

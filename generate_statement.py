@@ -30,8 +30,9 @@ def draw_globe_watermark(c, width, height):
         c.beginForm(form_name)
         c.saveState()
         
-        # Solid opaque color for the form content
-        WATERMARK_COLOR = HexColor("#B0B0B0") 
+        # Solid opaque LIGHT color for the form content
+        # Using a very light grey (#E6E6E6) to simulate transparency without alpha blending artifacts (darker overlaps)
+        WATERMARK_COLOR = HexColor("#E6E6E6") 
         c.setFillColor(WATERMARK_COLOR) 
         c.setStrokeColor(WATERMARK_COLOR)
         c.setFillAlpha(1.0) 
@@ -87,11 +88,11 @@ def draw_globe_watermark(c, width, height):
         # Mark as defined
         c._globe_watermark_defined = True
 
-    # Now draw the form with transparency
+    # Now draw the form OPAQUELY (color is already light)
     c.saveState()
-    # Apply global transparency to the opaque form
-    c.setFillAlpha(0.15) 
-    c.setStrokeAlpha(0.15)
+    # No transparency applied here to avoid overlap darkening
+    c.setFillAlpha(1.0) 
+    c.setStrokeAlpha(1.0)
     c.doForm(form_name)
     c.restoreState()
 
