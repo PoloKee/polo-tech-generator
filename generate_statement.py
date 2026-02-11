@@ -938,6 +938,24 @@ def create_statement_pdf(output_path, data):
     
     # Centered above address? No, left aligned as per image
     c.drawString(110, y_voucher + 25, voucher_name)
+    
+    # Address Lines for Voucher
+    c.setFont("Helvetica", 7)
+    v_addr1 = holder.get("address_line1", "")
+    v_addr2 = holder.get("address_line2", "")
+    v_addr3 = holder.get("address_line3", "")
+    
+    v_y = y_voucher + 15
+    if v_addr1:
+        c.drawString(110, v_y, v_addr1)
+        v_y -= 8
+    if v_addr2:
+        c.drawString(110, v_y, v_addr2)
+        v_y -= 8
+    if v_addr3:
+        c.drawString(110, v_y, v_addr3)
+        
+    c.setFont("Helvetica", 9)
     c.drawString(165, y_voucher + 5, access_num)
     
     # Checkbox Area
