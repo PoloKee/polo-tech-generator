@@ -62,6 +62,9 @@ def generate_kingdom_docs():
     for day_offset in range(4): # 0, 1, 2, 3 -> Jan 1, 2, 3, 4
         date_obj = datetime.datetime(2026, 1, 1) + datetime.timedelta(days=day_offset)
         
+        daily_txs = []
+        
+        # 1. Create 4 Rent Transactions
         for i in range(4):
             # Pick a resident name
             res_idx = day_offset * 4 + i
@@ -70,12 +73,28 @@ def generate_kingdom_docs():
             else:
                 res_name = f"RESIDENT #{res_idx+1}"
             
-            start_txs.append({
+            # Format: Pay Type, Description, Method, Message, Source, Happy Face
+            # Example: ACH DEPOSIT RENT PAYMENT WEB ID:12345 MSG:THANKS :)
+            desc = f"ACH DEPOSIT RENT WEB PMT {res_name} MSG:THANKS :)"
+            
+            daily_txs.append({
                 "date_obj": date_obj,
-                "description": f"RENT PAYMENT - {res_name}",
+                "description": desc,
                 "amount": 750.00, # Income
                 "category": "INCOME"
             })
+            
+        # 2. Create 2-3 Random Business Transactions to interleave
+        num_random = random.randint(2, 3)
+        for _ in range(num_random):
+            daily_txs.append(create_random_tx(date_obj, user_profile))
+            
+        # 3. Shuffle to interleave them so rent payments aren't back-to-back
+        random.shuffle(daily_txs)
+        
+        # Add to main list
+        start_txs.extend(daily_txs)
+
 
     # Combine and Sort
     all_raw_txs = start_txs + convert_formatted_to_raw(main_txs, 2026)
@@ -126,7 +145,7 @@ def generate_kingdom_docs():
     }
     
     # Generate PDF
-    output_file = "Kingdom_Mandate_Center_Statement_Jan2026_revised.pdf"
+    output_file = "Kingdom_Mandate_Center_Statement_Jan2026_revised_v2.pdf"
     print(f"Generating {output_file}...")
     create_statement_pdf(output_file, stmt_data)
     print("Done.")
