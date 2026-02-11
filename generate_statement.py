@@ -573,8 +573,24 @@ def draw_persistent_header(c, width, height, data, page_num, total_pages):
         
         c.setFont("Helvetica", 9)
         # Get name safely
-        name = data.get('account_holder', {}).get('name', 'NAPOLEON KEETON').upper()
+        holder = data.get('account_holder', {})
+        name = holder.get('name', 'NAPOLEON KEETON').upper()
         c.drawString(25, height - 102, f"For {name}")
+        
+        # Add Address lines
+        y_hdr_addr = height - 114
+        h_addr1 = holder.get("address_line1", "")
+        h_addr2 = holder.get("address_line2", "")
+        h_addr3 = holder.get("address_line3", "")
+        
+        if h_addr1:
+            c.drawString(25, y_hdr_addr, h_addr1)
+            y_hdr_addr -= 12
+        if h_addr2:
+            c.drawString(25, y_hdr_addr, h_addr2)
+            y_hdr_addr -= 12
+        if h_addr3:
+            c.drawString(25, y_hdr_addr, h_addr3)
     
     # --- Right Side ---
     # Center Align relative to the right column
