@@ -59,7 +59,8 @@ MERCHANT_CATEGORIES = {
     "SERVICES": ["USPS", "UPS STORE", "FEDEX OFFICE", "LA FITNESS", "PLANET FITNESS", "CINEMARK", "AMC THEATRES", "GREAT CLIPS", "SUPERCUTS"],
     "TRAVEL": ["DELTA AIR LINES", "UBER TRIP", "LYFT RIDE", "HILTON HOTELS", "MARRIOTT", "ENTERPRISE RENT-A-CAR", "AMERICAN AIRLINES", "AIRBNB"],
     "OFFICE_LUNCH": ["SUBWAY", "JIMMY JOHNS", "JERSEY MIKES", "DUNKIN", "STARBUCKS", "EINSTEIN BROS BAGELS", "PANDA EXPRESS", "CHIPOTLE"],
-    "ONLINE": ["AMZN Mktp US", "Amazon.com", "APPLE.COM/BILL", "GOOGLE *SERVICES", "PAYPAL", "UBER EATS"]
+    "ONLINE": ["AMZN Mktp US", "Amazon.com", "APPLE.COM/BILL", "GOOGLE *SERVICES", "PAYPAL", "UBER EATS"],
+    "BUSINESS_EXPENSE": ["OFFICE DEPOT", "STAPLES", "ULINE", "ADOBE CREATIVE CLOUD", "ZOOM.US", "INTUIT QUICKBOOKS", "VISTAPRINT", "MAILCHIMP", "GODADDY.COM"]
 }
 
 RECURRING_BILLS = {
@@ -189,6 +190,9 @@ def generate_transactions(start_date_str, end_date_str, profile, count=15):
     elif position == "office":
         categories.append("OFFICE_LUNCH")
         weights = [20, 20, 15, 15, 5, 10, 15] # Lots of lunches
+    elif position == "business_owner":
+        categories.extend(["BUSINESS_EXPENSE", "OFFICE_LUNCH", "TRAVEL"])
+        weights = [10, 15, 10, 5, 5, 10, 25, 10, 10] # Heavy business spend
         
     for _ in range(count):
         # 1. Date
@@ -253,6 +257,10 @@ def generate_transactions(start_date_str, end_date_str, profile, count=15):
         elif cat == "ONLINE":
             description = random.choice(MERCHANT_CATEGORIES["ONLINE"])
             amount = random.uniform(10, 200)
+
+        elif cat == "BUSINESS_EXPENSE":
+            description = random.choice(MERCHANT_CATEGORIES["BUSINESS_EXPENSE"])
+            amount = random.uniform(50, 400)
 
         transactions.append({
             "date_obj": tx_date,
