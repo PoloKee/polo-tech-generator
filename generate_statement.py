@@ -267,7 +267,7 @@ def draw_change_of_address_form(c, width, bottom_y):
     c.drawString(x_left + 125, y_row1 + 5, "(          )")
     c.drawString(x_left + 325, y_row1 + 5, "(          )")
 
-def draw_disclosure_section(c, width, height, y_start, page_num, total_pages):
+def draw_disclosure_section(c, width, height, y_start, page_num, total_pages, data):
     """
     Draws the Disclosure Information section.
     Handles page breaks internally if needed, but primarily intended for the last page.
@@ -296,11 +296,9 @@ def draw_disclosure_section(c, width, height, y_start, page_num, total_pages):
              c.showPage()
              p_num += 1
              draw_globe_watermark(c, width, height)
-             c.setFont("Helvetica-Bold", 10)
-             c.drawString(25, height - 35, "Statement of Account (Continued)")
-             c.setFont("Helvetica", 8)
-             c.drawRightString(width - 40, height - 35, f"Page {p_num} of {total_pages}")
-             return height - 60, p_num
+             # Use the persistent header for consistency
+             new_y = draw_persistent_header(c, width, height, data, p_num, total_pages)
+             return new_y, p_num
         return y, p_num
 
     y = y_start
@@ -1463,7 +1461,7 @@ def create_statement_pdf(output_path, data):
     y_trans -= 20
     
     # --- Disclosure Section ---
-    y_trans, page_num = draw_disclosure_section(c, width, height, y_trans, page_num, total_pages)
+    y_trans, page_num = draw_disclosure_section(c, width, height, y_trans, page_num, total_pages, data)
     
     c.save()
 
